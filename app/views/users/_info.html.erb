@@ -8,6 +8,10 @@
 	  <th>introduction</th>
 	  <th><%= user.introduction %></th>
   </tr>
+  
+  <%= render partial: "user_info", locals: { user: current_user }%>
+ 
+  
 </table>
 　
 <div class='row'>
