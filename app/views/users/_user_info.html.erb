@@ -25,7 +25,11 @@
         <% end %>
       <% end %>
     </td>
-   
+    <td>
+      <% if current_user != user && current_user.following?(user) && user.following?(current_user) %>
+        <%= link_to 'DMを送る', room_path(user.id), class:"btn btn-primary btn-sm" %>
+      <% end %>
+    </td>
   </tr>
   
   
